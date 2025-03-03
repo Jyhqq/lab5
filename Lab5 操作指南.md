@@ -3,8 +3,10 @@
 ## 第一部分：基础操作
 1. &zwnj;**创建GitHub仓库**&zwnj;
 - 登录GitHub、点击右上角 ➕ > "New repository"、输入仓库名lab5、复制仓库HTTPS/SSH地址
+- Войдите в GitHub, нажмите ➕ > «Новый репозиторий» в правом верхнем углу, введите имя репозитория lab5 и скопируйте HTTPS/SSH-адрес репозитория.
 
-2. &zwnj;**克隆仓库到本地**&zwnj; 
+2. &zwnj;**克隆仓库到本地**&zwnj;
+   &zwnj;**Клонируйте репозиторий на локальный компьютер**&zwnj;
  ```bash
     git clone https://github.com/Jyhqq/lab5
     cd lab5
@@ -13,6 +15,9 @@
 3. &zwnj;**添加文件**&zwnj;
 - 创建example.txt  并添加内容：
 - 提交更改
+  &zwnj;**Добавить файл**&zwnj;
+- Создайте example.txt и добавьте следующее содержимое:
+- Внесение изменений
  ```bash
     git add example.txt 
     git commit -m "添加示例文件"
@@ -24,6 +29,7 @@
 
 ## 第二部分：分支管理
 4. &zwnj;**创建功能分支**&zwnj;
+   &zwnj;**Создать ветку функций**&zwnj
 
  ```bash
     git branch feature-branch
@@ -37,6 +43,11 @@
 - 编辑example.txt 添加新内容
 
 - 提交更改：
+  &zwnj;**Изменить и отправить**&zwnj;
+
+- Отредактируйте example.txt и добавьте новый контент.
+
+- Внесение изменений:
 
  ```bash
     git add .
@@ -48,6 +59,7 @@
 </div>
 
 6.  &zwnj;**合并分支**&zwnj;
+    &zwnj;**Объединить ветки**&zwnj;
  ```bash
     git checkout main
     git merge feature-branch
@@ -59,12 +71,16 @@
 
 ## 第三部分：分支开发实战
 7.  &zwnj;**创建登录功能分支**&zwnj;
+    &zwnj;**Создать ветку функции входа**&zwnj;
  ```bash
     git checkout -b feature-login
  ```
 8. &zwnj;**添加新章节**&zwnj;
 - 修改example.txt ：
 - 提交更改：
+  &zwnj;**Добавить новую главу**&zwnj;
+- Измените example.txt:
+- Внесение изменений:
 
  ```bash
     git add example.txt 
@@ -78,6 +94,8 @@
 ## 第四部分：冲突解决
 9. &zwnj;**模拟冲突**&zwnj;
 - 分支修改
+   &zwnj;**Имитация конфликта**&zwnj;
+- Модификация ветки
  ```bash
     git checkout feature-login
  ```
@@ -93,6 +111,9 @@
 10. &zwnj;**解决冲突**&zwnj;
 - 合并时出现冲突标记：
 - 提交最终版本：
+    &zwnj;**Разрешение конфликтов**&zwnj;
+- При слиянии появляются маркеры конфликтов:
+- Отправьте окончательную версию:
  ```bash
     git add example.txt 
     git commit -m "解决第2章内容冲突"
@@ -108,6 +129,11 @@
 - 在项目根目录创建.git/hooks/pre-commit
 
 - 添加检查脚本：
+    &zwnj;**Создать хук перед фиксацией**&zwnj;
+
+- Создайте .git/hooks/pre-commit в корневом каталоге проекта.
+
+- Добавлен скрипт проверки:
 
  ```bash
     #!/bin/bash
@@ -132,7 +158,8 @@
 
 ## Git Flow 工作流实践
 
-12. &zwnj;**环境准备**&zwnj; 
+12. &zwnj;**环境准备**&zwnj;
+    &zwnj;**Подготовка окружающей среды**&zwnj;
 
  ```bash
     sudo apt-get install git-flow  # 安装依赖
@@ -143,7 +170,7 @@
 </div>
 
 13. &zwnj;**功能开发**&zwnj;
-
+    &zwnj;**Разработка функций**&zwnj;
  ```bash
     git flow feature start task-management  # 创建任务管理功能分支
  ```
